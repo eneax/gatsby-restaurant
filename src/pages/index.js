@@ -1,21 +1,14 @@
 import React from "react"
-// import { Link } from "gatsby"
-import styled from "styled-components"
-
+import { FaBeer } from 'react-icons/fa'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-
-const ButtonWrapper = styled.button`
-  background: blue;
-  color: white;
-`
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <h3>Hello, friend!</h3>
-    <ButtonWrapper>Click Me</ButtonWrapper>
+    <h4> Lets go for a <FaBeer />? </h4>
   </Layout>
 )
 
