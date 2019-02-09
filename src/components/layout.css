@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --mainOrange: #f15025;
-}
-
 body {
   font-family: "Caveat", cursive;
   color: black;

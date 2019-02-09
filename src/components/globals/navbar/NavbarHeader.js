@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import logo from '../../../images/logo.svg'
-import { FaAlignRight } from 'react-icons/fa'
 import styled from 'styled-components'
+import { FaAlignRight } from 'react-icons/fa'
+
+import logo from '../../../images/logo.svg'
+import { styles } from '../../../utils'
 
 
 export default class NavbarHeader extends Component {
@@ -25,6 +27,7 @@ export default class NavbarHeader extends Component {
   }
 }
 
+
 const HeaderWrapper = styled.div`
   padding: 0.4rem 1rem;
   display: flex;
@@ -32,9 +35,9 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
 
   .toggle-icon {
-    font-size: 1.75rem;
-    color: yellowgreen;
     cursor: pointer;
+    font-size: 1.75rem;
+    color: ${styles.colors.mainYellow};
   }
 
   @media (min-width: 768px) {
