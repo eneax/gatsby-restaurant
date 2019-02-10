@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-
 import NavbarHeader from './NavbarHeader'
 import NavbarLinks from './NavbarLinks'
 import NavbarIcons from './NavbarIcons'
-
+import styled from 'styled-components'
 
 export default class Navbar extends Component {
   state = {
-    navbarOpen: false
+    navbarOpen: false,
   }
 
-  handleNavbar = () => (
-    this.setState(() => ({
-      navbarOpen: !this.state.navbarOpen
-    }))
-  );
-
+  handleNavbar = () => {
+    this.setState(() => {
+      return { navbarOpen: !this.state.navbarOpen }
+    })
+  }
+  
   render() {
     return (
       <NavWrapper>
@@ -28,10 +26,9 @@ export default class Navbar extends Component {
   }
 }
 
-
 const NavWrapper = styled.nav`
   @media (min-width: 768px) {
     display: flex;
-    align-self: center;
+    align-items: center;
   }
 `
