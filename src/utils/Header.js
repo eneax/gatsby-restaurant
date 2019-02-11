@@ -12,6 +12,14 @@ function HomeHeader({ img, children }) {
   )
 }
 
+function PageHeader({ img, children }) {
+  return (
+    <DefaultHeader img={img}>
+      {children}
+    </DefaultHeader>
+  )
+}
+
 
 const IndexHeader = styled.header`
   min-height: calc(100vh - 54.78px); /* 100vh - height of navbar */
@@ -24,9 +32,18 @@ const IndexHeader = styled.header`
   align-items: center;
 `
 
+const DefaultHeader = styled(IndexHeader)`
+  min-height: 60vh;
+`
+
+
 // Default props (if img in 'pages/index.js' is not available)
 HomeHeader.defaultProps = {
   img: img,
 }
 
-export { HomeHeader }
+PageHeader.defaultProps = {
+  img: img,
+}
+
+export { HomeHeader, PageHeader }
