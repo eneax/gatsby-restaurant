@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Section } from '../../utils'
+import { Section, Title } from '../../utils'
 
 export default class QuickInfo extends Component {
   render() {
     return (
       <Section>
-        Some Content
+        <Title message='let us tell you' title='our mission' />
       </Section>
     )
   }
