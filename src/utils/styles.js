@@ -21,3 +21,11 @@ export const letterSpacing = ({ spacing = '0.1rem' }) => {
 }
 
 export const textSlanted = `font-family:'Caveat', cursive;`
+
+export const border = ({
+  width = '.15rem',
+  type = 'solid',
+  color = 'white',
+}) => {
+  return `border:${width} ${type} ${color}`
+}
