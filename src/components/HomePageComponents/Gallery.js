@@ -6,26 +6,20 @@ import Img from "gatsby-image"
 import { styles, Section } from '../../utils'
 
 
-const SINGLE_IMAGE = graphql`
+const GET_IMAGES = graphql`
   {
-    img1: file(relativePath: { eq: "homeGallery/img-1.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth:500) {
-          ...GatsbyImageSharpFluid
-        }
+    getAllImages: allFile(filter: {
+      relativeDirectory: {
+        eq: "homeGallery"
       }
-    }
-    img2: file(relativePath: { eq: "homeGallery/img-2.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth:500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    img3: file(relativePath: { eq: "homeGallery/img-3.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth:500) {
-          ...GatsbyImageSharpFluid
+    }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
@@ -36,27 +30,19 @@ const SINGLE_IMAGE = graphql`
 export default function Gallery() {
   return (
     <StaticQuery 
-      query={SINGLE_IMAGE}
+      query={GET_IMAGES}
       render={data => {
-        const img1 = data.img1.childImageSharp.fluid;
-        const img2 = data.img2.childImageSharp.fluid;
-        const img3 = data.img3.childImageSharp.fluid;
+        const images = data.getAllImages.edges
 
         return (
           <Section>
             <GalleryWrapper>
-              <div className="item item-1">
-                <Img fluid={img1} />
-                <p className="info">awesome pizza</p>
-              </div>
-              <div className="item item-2">
-                <Img fluid={img2} />
-                <p className="info">awesome pork</p>
-              </div>
-              <div className="item item-3">
-                <Img fluid={img3} />
-                <p className="info">awesome steak</p>
-              </div>
+              {images.map(({node}, i) => (
+                <div className={`item item-${i + 1}`} key={i}>
+                  <Img fluid={node.childImageSharp.fluid} />
+                  <p className="info">Deliciousss</p>
+                </div>
+              ))}
             </GalleryWrapper>
           </Section>
         )
