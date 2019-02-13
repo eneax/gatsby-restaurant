@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { styles } from '../utils'
+import { colors, letterSpacing, textSlanted } from '../components/styles/globalStyles'
 
-export function Title({ title, message }) {
+export default function Title({ title, message }) {
   return (
     <TitleWrapper>
       <h3 className='message'>{message}</h3>
@@ -17,14 +17,14 @@ const TitleWrapper = styled.div`
   text-align: center;
 
   .message {
-    ${styles.textSlanted};
-    ${styles.letterSpacing({ spacing: '.3rem' })};
+    ${textSlanted};
+    ${letterSpacing({ spacing: '.3rem' })};
     font-size: 2rem;
-    color: ${styles.colors.mainYellow};
+    color: ${colors.mainYellow};
   }
 
   .title {
-    ${styles.letterSpacing({ spacing: '.3rem' })};
+    ${letterSpacing({ spacing: '.3rem' })};
     font-size: 2rem;
     text-transform: uppercase;
   }
@@ -32,7 +32,7 @@ const TitleWrapper = styled.div`
   .underline {
     width: 5rem;
     height: .2rem;
-    background: ${styles.colors.mainYellow};
+    background: ${colors.mainYellow};
     margin: .5rem auto;
   }
 `

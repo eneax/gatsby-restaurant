@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { styles } from '../utils'
+import { colors, letterSpacing, textSlanted } from '../components/styles/globalStyles'
 
 export default function Banner({ title, subtitle, children }) {
   return (
@@ -18,17 +18,17 @@ const BannerWrapper = styled.div`
   text-align: center;
 
   .title {
-    color: ${styles.colors.mainWhite};
+    color: ${colors.mainWhite};
     font-size: 3rem;
     text-transform: uppercase;
-    ${styles.letterSpacing({
+    ${letterSpacing({
       spacing: '.75rem'
     })};
   }
   .subtitle {
-    color: ${styles.colors.mainWhite};
-    ${styles.textSlanted};
-    ${styles.letterSpacing({
+    color: ${colors.mainWhite};
+    ${textSlanted};
+    ${letterSpacing({
       spacing: '.15rem'
     })};
     font-size: 1.5rem;

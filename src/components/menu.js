@@ -2,8 +2,9 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Section, Title } from '../utils'
+import Section from '../components/styles/section'
 import Product from './Product'
+import Title from './title'
 
 
 const PRODUCTS = graphql`

@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-import { styles } from '../utils'
+import { colors, transObject, border } from '../components/styles/globalStyles'
 
 
 const icons = [
@@ -47,18 +47,18 @@ export default Footer
 
 const FooterWrapper = styled.footer`
   padding: 2rem 0;
-  background: ${styles.colors.mainBlack};
+  background: ${colors.mainBlack};
 
   .title {
-    color: ${styles.colors.mainYellow};
+    color: ${colors.mainYellow};
     text-align: center;
     width: 10rem;
     text-transform: uppercase;
     padding: .3rem 1rem;
     margin: 0 auto 2rem auto;
     font-size: 1.5rem;
-    ${styles.border({
-      color: `${styles.colors.mainYellow}`
+    ${border({
+      color: `${colors.mainYellow}`
     })};
   }
 
@@ -70,16 +70,16 @@ const FooterWrapper = styled.footer`
   }
 
   .icon {
-    color: ${styles.colors.mainWhite};
+    color: ${colors.mainWhite};
     font-size: 1.3rem;
-    ${styles.transObject({})};
+    ${transObject({})};
     &:hover {
-      color: ${styles.colors.mainYellow};
+      color: ${colors.mainYellow};
     }
   }
 
   .copyright {
-    color: ${styles.colors.mainWhite};
+    color: ${colors.mainWhite};
     text-transform: capitalize;
     text-align: center;
     margin: 1rem 0;

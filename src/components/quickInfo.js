@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { styles, Section, Title, SectionButton } from '../utils'
+import { colors } from '../components/styles/globalStyles'
+import { SectionButton } from '../components/styles/buttons'
+import Title from './title'
+import Section from '../components/styles/section'
+
 
 export default class QuickInfo extends Component {
   render() {
@@ -32,7 +36,7 @@ const QuickInfoWrapper = styled.div`
 
   .text {
     line-height: 2rem;
-    color: ${styles.colors.mainGrey};
+    color: ${colors.mainGrey};
     word-spacing: .2rem;
   }
 

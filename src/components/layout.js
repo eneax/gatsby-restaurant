@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import GlobalStyle from './styles/GlobalStyle'
+import { GlobalStyle } from './styles/globalStyles'
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 

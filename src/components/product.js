@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { styles } from '../utils'
+import { colors } from '../components/styles/globalStyles'
 
 
 export default function Product({ product }) {
@@ -42,12 +42,12 @@ const ProductWrapper = styled.div`
   }
 
   .name {
-    color: ${styles.colors.mainYellow};
+    color: ${colors.mainYellow};
     margin-top: .5rem;
   }
 
   .price {
-    color: ${styles.colors.mainYellow};
+    color: ${colors.mainYellow};
     margin-top: .5rem;
   }
 

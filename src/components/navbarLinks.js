@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { styles } from '../utils'
+import { colors, transObject, transDefault } from '../components/styles/globalStyles'
 
 
 export default class NavbarLinks extends Component {
@@ -56,28 +56,28 @@ const NavbarLinksWrapper = styled.ul`
     display: block;
     text-decoration: none;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    color: ${styles.colors.mainGrey};
+    color: ${colors.mainGrey};
     font-weight: 700;
     text-transform: capitalize;
     cursor: pointer;
-    ${styles.transDefault};
+    ${transDefault};
     &:hover {
-      background: ${styles.colors.mainGrey};
-      color: ${styles.colors.mainYellow};
+      background: ${colors.mainGrey};
+      color: ${colors.mainYellow};
       padding: 0.5rem 1rem 0.5rem 1.3rem;
     }
   }
   
   height: ${props => (props.open ? '152px' : '0px')};
   overflow: hidden;
-  ${styles.transObject({})};
+  ${transObject({})};
 
   @media (min-width: 768px) {
     height: auto; /* otherwise links won't show up */
     display: flex;
     margin: 0 auto;
     .nav-link:hover {
-      background: ${styles.colors.mainWhite};
+      background: ${colors.mainWhite};
       padding: 0.5rem 1rem;
     }
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import img from '../images/bcg/homeBcg.jpeg'
+import img from '../../images/bcg/homeBcg.jpeg'
 
 
 // children is whatever we pass to HomeHeader in 'pages/index.js'

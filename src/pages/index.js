@@ -5,8 +5,10 @@ import SEO from "../components/seo"
 import QuickInfo from "../components/quickInfo"
 import Gallery from "../components/gallery"
 import Menu from "../components/menu"
+import Banner from "../components/banner"
 
-import { HomeHeader, Banner, BannerButton } from '../utils'
+import { HomeHeader } from '../components/styles/headers'
+import { BannerButton } from '../components/styles/buttons'
 import img from '../images/bcg/homeBcg.jpeg'
 
 const IndexPage = () => (

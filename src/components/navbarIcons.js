@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-import { styles } from '../utils'
+import { colors, transObject } from '../components/styles/globalStyles'
 
 export default class NavbarIcons extends Component {
   state = {
@@ -54,10 +54,10 @@ const IconWrapper = styled.div`
   .icon {
     font-size: 1.3rem;
     cursor: pointer;
-    ${styles.transObject};
+    ${transObject({})};
 
     &:hover {
-      color: ${styles.colors.mainYellow};
+      color: ${colors.mainYellow};
     }
   }
 

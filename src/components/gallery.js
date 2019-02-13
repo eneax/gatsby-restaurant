@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 
-import { styles, Section } from '../utils'
+import { colors } from '../components/styles/globalStyles'
+import Section from '../components/styles/section'
 
 
 const GET_IMAGES = graphql`
@@ -65,7 +66,7 @@ const GalleryWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background: ${styles.colors.mainYellow};
+    background: ${colors.mainYellow};
     padding: .1rem .3rem;
     text-transform: capitalize;
   }
