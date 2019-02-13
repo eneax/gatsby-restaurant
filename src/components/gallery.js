@@ -66,7 +66,7 @@ const GalleryWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background: ${colors.mainOrange};
+    background: ${colors.mainYellow};
     padding: .1rem .3rem;
     text-transform: capitalize;
   }

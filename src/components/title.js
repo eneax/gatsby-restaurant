@@ -20,7 +20,7 @@ const TitleWrapper = styled.div`
     ${textSlanted};
     ${letterSpacing({ spacing: '.3rem' })};
     font-size: 2rem;
-    color: ${colors.mainOrange};
+    color: ${colors.mainYellow};
   }
 
   .title {
@@ -32,7 +32,7 @@ const TitleWrapper = styled.div`
   .underline {
     width: 5rem;
     height: .2rem;
-    background: ${colors.mainOrange};
+    background: ${colors.mainYellow};
     margin: .5rem auto;
   }
 `

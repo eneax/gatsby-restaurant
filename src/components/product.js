@@ -42,12 +42,12 @@ const ProductWrapper = styled.div`
   }
 
   .name {
-    color: ${colors.mainOrange};
+    color: ${colors.mainYellow};
     margin-top: .5rem;
   }
 
   .price {
-    color: ${colors.mainOrange};
+    color: ${colors.mainYellow};
     margin-top: .5rem;
   }
 

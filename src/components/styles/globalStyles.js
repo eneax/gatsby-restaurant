@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 export const colors = {
   mainWhite: `#fff`,
   mainBlack: `#262626`,
-  mainOrange: `#F4623A`,
+  mainYellow: `#FFBB00`,
   mainGrey: `#474747`,
 }
 

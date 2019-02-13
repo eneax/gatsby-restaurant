@@ -31,7 +31,7 @@ const SectionButton = styled(BannerButton)`
 
   &:hover {
     background: ${colors.mainBlack};
-    color: ${colors.mainOrange};
+    color: ${colors.mainYellow};
   }
 `
 

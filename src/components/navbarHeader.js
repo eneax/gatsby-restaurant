@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { FaAlignRight } from 'react-icons/fa'
 
-import { colors, textSlanted, letterSpacing, transObject } from '../components/styles/globalStyles'
+import { colors, letterSpacing, transObject } from '../components/styles/globalStyles'
 
 
 export default class NavbarHeader extends Component {
@@ -35,10 +35,11 @@ const NavbarHeaderWrapper = styled.div`
 
   a {
     margin-top: .01rem;
-    ${textSlanted};
-    ${letterSpacing({})};
+    font-family: avenir, sans-serif;
+    font-weight: 600;
+    ${letterSpacing({ spacing: '.3rem' })};
     transform: skew(-15deg);
-    font-size: 1.75rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase;
     color: ${colors.mainWhite};
@@ -46,7 +47,7 @@ const NavbarHeaderWrapper = styled.div`
   }
   
   .logo {
-    background-image: linear-gradient(to right, ${colors.mainGrey} 50%, ${colors.mainOrange} 50%);
+    background-image: linear-gradient(to right, ${colors.mainGrey} 50%, ${colors.mainYellow} 50%);
     background-position: 0;
     background-size: 200%;
     transition: all .4s;
@@ -61,7 +62,7 @@ const NavbarHeaderWrapper = styled.div`
     color: ${colors.mainGrey};
     ${transObject({})};
     &:hover {
-      color: ${colors.mainOrange};
+      color: ${colors.mainYellow};
     }
   }
 
