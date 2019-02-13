@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { FaAlignRight } from 'react-icons/fa'
 
-import { colors, textSlanted, letterSpacing } from '../components/styles/globalStyles'
+import { colors, textSlanted, letterSpacing, transObject } from '../components/styles/globalStyles'
 
 
 export default class NavbarHeader extends Component {
@@ -58,7 +58,11 @@ const NavbarHeaderWrapper = styled.div`
   .toggle-icon {
     cursor: pointer;
     font-size: 1.75rem;
-    color: ${colors.mainOrange};
+    color: ${colors.mainGrey};
+    ${transObject({})};
+    &:hover {
+      color: ${colors.mainOrange};
+    }
   }
 
   @media (min-width: 768px) {
