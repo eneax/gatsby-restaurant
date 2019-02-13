@@ -1,26 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+
+import { icons } from '../utils/icons'
 import { colors, transObject, border } from '../components/styles/globalStyles'
-
-
-const icons = [
-  {
-    id: 1,
-    icon: <FaFacebook className='icon facebook-icon' />,
-    path: `https://www.facebook.com`,
-  },
-  {
-    id: 2,
-    icon: <FaInstagram className='icon instagram-icon' />,
-    path: `https://www.instagram.com`,
-  },
-  {
-    id: 3,
-    icon: <FaTwitter className='icon twitter-icon' />,
-    path: `https://www.twitter.com`,
-  },
-]
 
 
 const Footer = () => (
@@ -73,9 +55,16 @@ const FooterWrapper = styled.footer`
     color: ${colors.mainWhite};
     font-size: 1.3rem;
     ${transObject({})};
-    &:hover {
-      color: ${colors.mainYellow};
-    }
+  }
+
+  .facebook-icon:hover {
+    color: #3b579d; 
+  }
+  .twitter-icon:hover {
+    color: #3ab7f0; 
+  }
+  .instagram-icon:hover {
+    color: #da5f53; 
   }
 
   .copyright {

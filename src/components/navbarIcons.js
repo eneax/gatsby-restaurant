@@ -1,49 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+
 import { colors, transObject } from '../components/styles/globalStyles'
+import { icons } from '../utils/icons'
 
-export default class NavbarIcons extends Component {
-  state = {
-    icons: [
-      {
-        id: 1,
-        icon: <FaFacebook className='icon facebook-icon' />,
-        path: 'https://www.facebook.com'
-      },
-      {
-        id: 2,
-        icon: <FaInstagram className='icon instagram-icon' />,
-        path: 'https://www.instagram.com'
-      },
-      {
-        id: 3,
-        icon: <FaTwitter className='icon twitter-icon' />,
-        path: 'https://www.twitter.com'
-      },
-    ]
-  }
-  render() {
-    return (
-      <IconWrapper>
-        {
-          this.state.icons.map((item) => (
-            <a
-              key={item.id}
-              href={item.path}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.icon}
-            </a>
-          ))
-        }
-      </IconWrapper>
-    )
-  }
-}
 
-const IconWrapper = styled.div`
+const NavbarIcons = () => (
+  <IconsWrapper>
+    {
+      icons.map(({ id, path, icon }) => (
+        <a
+          key={id}
+          href={path}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {icon}
+        </a>
+      ))
+    }
+  </IconsWrapper>
+)
+
+export default NavbarIcons
+
+
+const IconsWrapper = styled.div`
   display: none;
   @media (min-width: 768px) {
     display: flex;
@@ -55,19 +37,20 @@ const IconWrapper = styled.div`
     font-size: 1.3rem;
     cursor: pointer;
     ${transObject({})};
+    color: ${colors.mainGrey};
 
     &:hover {
       color: ${colors.mainYellow};
     }
   }
 
-  .facebook-icon {
+  .facebook-icon:hover {
     color: #3b579d; 
   }
-  .twitter-icon {
+  .twitter-icon:hover {
     color: #3ab7f0; 
   }
-  .instagram-icon {
+  .instagram-icon:hover {
     color: #da5f53; 
   }
 `

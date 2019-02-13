@@ -22,17 +22,17 @@ export const colors = {
   mainGrey: `#474747`,
 }
 
-export const transDefault = 'transition: all .5s ease-in-out';
+export const transDefault = 'transition: all .3s ease-in-out';
 
 export const transObject = ({
   property = 'all',
-  time = '0.5s',
+  time = '.3s',
   type = 'ease-in-out',
 }) => {
   return `transition: ${property} ${time} ${type}`
 }
 
-export const letterSpacing = ({ spacing = '0.1rem' }) => {
+export const letterSpacing = ({ spacing = '.1rem' }) => {
   return `letter-spacing:${spacing}`
 }
 
