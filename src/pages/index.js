@@ -2,9 +2,9 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import QuickInfo from "../components/HomePageComponents/QuickInfo"
-import Gallery from "../components/HomePageComponents/Gallery"
-import Menu from "../components/HomePageComponents/Menu"
+import QuickInfo from "../components/quickInfo"
+import Gallery from "../components/gallery"
+import Menu from "../components/menu"
 
 import { HomeHeader, Banner, BannerButton } from '../utils'
 import img from '../images/bcg/homeBcg.jpeg'

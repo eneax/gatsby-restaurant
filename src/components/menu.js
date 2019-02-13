@@ -1,8 +1,8 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Section, Title, SectionButton } from '../../utils'
+import { Section, Title } from '../utils'
 import Product from './Product'
 
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { StaticQuery, graphql } from "gatsby"
 
-import { styles, Section } from '../../utils'
+import { styles, Section } from '../utils'
 
 
 const GET_IMAGES = graphql`

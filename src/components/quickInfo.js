@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import { styles } from '../../utils'
-import { Section, Title, SectionButton } from '../../utils'
+import { styles, Section, Title, SectionButton } from '../utils'
 
 export default class QuickInfo extends Component {
   render() {
