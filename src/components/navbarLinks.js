@@ -63,7 +63,7 @@ const NavbarLinksWrapper = styled.ul`
     ${transDefault};
     &:hover {
       background: ${colors.mainGrey};
-      color: ${colors.mainYellow};
+      color: ${colors.mainOrange};
       padding: 0.5rem 1rem 0.5rem 1.3rem;
     }
   }

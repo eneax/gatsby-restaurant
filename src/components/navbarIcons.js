@@ -40,7 +40,7 @@ const IconsWrapper = styled.div`
     color: ${colors.mainGrey};
 
     &:hover {
-      color: ${colors.mainYellow};
+      color: ${colors.mainOrange};
     }
   }
 

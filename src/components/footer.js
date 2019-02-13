@@ -32,7 +32,7 @@ const FooterWrapper = styled.footer`
   background: ${colors.mainBlack};
 
   .title {
-    color: ${colors.mainYellow};
+    color: ${colors.mainOrange};
     text-align: center;
     width: 10rem;
     text-transform: uppercase;
@@ -40,7 +40,7 @@ const FooterWrapper = styled.footer`
     margin: 0 auto 2rem auto;
     font-size: 1.5rem;
     ${border({
-      color: `${colors.mainYellow}`
+      color: `${colors.mainOrange}`
     })};
   }
 
