@@ -4,26 +4,22 @@ import img from '../../images/bcg/homeBcg.jpeg'
 
 
 // children is whatever we pass to HomeHeader in 'pages/index.js'
-function HomeHeader({ img, children }) {
-  return (
-    <IndexHeader img={img}>
-      {children}
-    </IndexHeader>
-  )
-}
+const HomeHeader = ({ img, children }) => (
+  <IndexHeader img={img}>
+    {children}
+  </IndexHeader>
+)
 
-function PageHeader({ img, children }) {
-  return (
-    <DefaultHeader img={img}>
-      {children}
-    </DefaultHeader>
-  )
-}
+const PageHeader = ({ img, children }) => (
+  <DefaultHeader img={img}>
+    {children}
+  </DefaultHeader>
+)
 
 
 const IndexHeader = styled.header`
-  min-height: calc(100vh - 54.78px); /* 100vh - height of navbar */
-  background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), 
+  min-height: calc(100vh - 56.94px); /* 100vh - height of navbar */
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 
               url(${props => props.img}) center/cover fixed no-repeat;
   
   /* center text inside the header */

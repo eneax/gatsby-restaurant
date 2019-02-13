@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,10 +16,12 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <HomeHeader img={img}>
-      <Banner title='eatery' subtitle='55 main street - Santa Monica, California'>
-        <BannerButton style={{ margin: '2rem auto' }}>
-          Menu
-        </BannerButton>
+      <Banner title='delicious' subtitle='17 main street - San Francisco, California'>
+        <Link to='/menu'>
+          <BannerButton style={{ margin: '2rem auto' }}>
+            Menu
+          </BannerButton>
+        </Link>
       </Banner>
     </HomeHeader>
 

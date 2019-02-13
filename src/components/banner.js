@@ -17,6 +17,10 @@ const BannerWrapper = styled.div`
   margin-bottom: 3rem;
   text-align: center;
 
+  a {
+    text-decoration: none;
+  }
+
   .title {
     color: ${colors.mainWhite};
     font-size: 3rem;
