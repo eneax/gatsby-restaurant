@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Section from '../components/styles/section'
-import Product from './Product'
+import Product from './product'
 import Title from './title'
 
 
@@ -26,31 +26,31 @@ const PRODUCTS = graphql`
   }
 `
 
-export default function Menu() {
-  return (
-    <Section>
-      <Title title='featured item' message='little taste' />
+const ProductList = () => (
+  <Section>
+    <Title title='featured item' message='little taste' />
 
-      <ProductList>
-        <StaticQuery
-          query={PRODUCTS}
-          render={data => {
-            const products = data.items.edges
+    <List>
+      <StaticQuery
+        query={PRODUCTS}
+        render={data => {
+          const products = data.items.edges
 
-            return (
-              products.map((item) => (
-                <Product key={item.node.id} product={item.node}/>
-              ))
-            );
-          }}
-        />
-      </ProductList>
-    </Section>
-  )
-}
+          return (
+            products.map((item) => (
+              <Product key={item.node.id} product={item.node} />
+            ))
+          );
+        }}
+      />
+    </List>
+  </Section>
+)
+
+export default ProductList
 
 
-const ProductList = styled.div`
+const List = styled.div`
   margin: 3rem 0;
   display: grid;
   grid-template-columns: 100%;

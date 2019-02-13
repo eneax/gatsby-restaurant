@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import QuickInfo from "../components/quickInfo"
 import Gallery from "../components/gallery"
-import Menu from "../components/menu"
+import ProductList from "../components/productList"
 import Banner from "../components/banner"
 
 import { HomeHeader } from '../components/styles/headers'
@@ -24,7 +24,7 @@ const IndexPage = () => (
 
     <QuickInfo />
     <Gallery />
-    <Menu />
+    <ProductList />
   </Layout>
 )
 
