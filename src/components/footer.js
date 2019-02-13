@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { icons } from '../utils/icons'
-import { colors, transObject, border } from '../components/styles/globalStyles'
+import { colors, transObject, border, letterSpacing } from '../components/styles/globalStyles'
 
 
 const Footer = () => (
@@ -32,13 +32,18 @@ const FooterWrapper = styled.footer`
   background: ${colors.mainBlack};
 
   .title {
+    font-family: avenir, sans-serif;
+    font-weight: 600;
+    ${letterSpacing({ spacing: '.3rem' })};
+    transform: skew(-15deg);
+    text-shadow: 1px 1px 0 rgba(${colors.mainGrey}, .4);
     color: ${colors.mainYellow};
     text-align: center;
     width: 10rem;
     text-transform: uppercase;
     padding: .3rem 1rem;
     margin: 0 auto 2rem auto;
-    font-size: 1.5rem;
+    font-size: 1rem;
     ${border({
       color: `${colors.mainYellow}`
     })};
