@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import GlobalStyle from './styles/GlobalStyle'
 import Navbar from "../components/navbar"
-import Footer from "../components/globals/Footer"
+import Footer from "../components/footer"
 
 
 const Layout =  ({ children }) => {
