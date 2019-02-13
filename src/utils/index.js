@@ -1,4 +1,4 @@
-import * as styles from './styles'
+import * as styles from './Styles'
 import { HomeHeader, PageHeader } from './Header'
 import Banner from './Banner'
 import { BannerButton, SectionButton } from './Button'
