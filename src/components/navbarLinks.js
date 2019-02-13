@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { styles } from '../../../utils'
+import { styles } from '../utils'
 
 
 export default class NavbarLinks extends Component {
@@ -32,7 +32,7 @@ export default class NavbarLinks extends Component {
 
   render() {
     return (
-      <LinkWrapper open={this.props.navbarOpen}>
+      <NavbarLinksWrapper open={this.props.navbarOpen}>
         {this.state.links.map(item => {
           return (
             <li key={item.id}>
@@ -42,13 +42,13 @@ export default class NavbarLinks extends Component {
             </li>
           )
         })}
-      </LinkWrapper>
+      </NavbarLinksWrapper>
     )
   }
 }
 
 
-const LinkWrapper = styled.ul`
+const NavbarLinksWrapper = styled.ul`
   li {
     list-style-type: none;
   }

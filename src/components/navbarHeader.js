@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 import { FaAlignRight } from 'react-icons/fa'
 
-import logo from '../../../images/logo.svg'
-import { styles } from '../../../utils'
+import logo from '../images/logo.svg'
+import { styles } from '../utils'
 
 
 export default class NavbarHeader extends Component {
@@ -12,7 +12,7 @@ export default class NavbarHeader extends Component {
     const { handleNavbar } = this.props
 
     return (
-      <HeaderWrapper>
+      <NavbarHeaderWrapper>
         <Link to='/'>
           <img src={logo} alt="Company name"/>
         </Link>
@@ -22,13 +22,13 @@ export default class NavbarHeader extends Component {
             handleNavbar()
           }}
         />
-      </HeaderWrapper>
+      </NavbarHeaderWrapper>
     )
   }
 }
 
 
-const HeaderWrapper = styled.div`
+const NavbarHeaderWrapper = styled.div`
   padding: 0.4rem 1rem;
   display: flex;
   align-items: center;

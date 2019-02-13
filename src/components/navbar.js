@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import NavbarHeader from './NavbarHeader'
-import NavbarLinks from './NavbarLinks'
-import NavbarIcons from './NavbarIcons'
 import styled from 'styled-components'
+
+import NavbarHeader from './navbarHeader'
+import NavbarLinks from './navbarLinks'
+import NavbarIcons from './navbarIcons'
+
 
 export default class Navbar extends Component {
   state = {

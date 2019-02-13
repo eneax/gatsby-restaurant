@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { styles } from '../../../utils'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { styles } from '../utils'
 
 export default class NavbarIcons extends Component {
   state = {
