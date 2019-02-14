@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import QuickInfo from "../components/quickInfo"
 import Gallery from "../components/gallery"
-import ProductList from "../components/productList"
+
 import Banner from "../components/banner"
 
 import { HomeHeader } from '../components/styles/headers'
@@ -27,7 +27,6 @@ const IndexPage = () => (
 
     <QuickInfo />
     <Gallery />
-    <ProductList />
   </Layout>
 )
 
