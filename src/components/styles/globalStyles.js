@@ -55,6 +55,7 @@ export const QuickInfoWrapper = styled.div`
     line-height: 2rem;
     color: ${colors.mainGrey};
     word-spacing: .2rem;
+    margin-bottom: 1rem;
   }
 
   @media (min-width: 768px) {
