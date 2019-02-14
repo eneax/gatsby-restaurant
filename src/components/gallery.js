@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import { colors } from '../components/styles/globalStyles'
 import Section from '../components/styles/section'
+import Title from './title';
 
 
 const GET_IMAGES = graphql`
@@ -28,32 +29,36 @@ const GET_IMAGES = graphql`
 `
 
 
-export default function Gallery() {
-  return (
-    <StaticQuery 
-      query={GET_IMAGES}
-      render={data => {
-        const images = data.getAllImages.edges
+const Gallery = () => (
+  <StaticQuery
+    query={GET_IMAGES}
+    render={data => {
+      const images = data.getAllImages.edges
 
-        return (
-          <Section>
-            <GalleryWrapper>
-              {images.map(({node}, i) => (
-                <div className={`item item-${i + 1}`} key={i}>
-                  <Img fluid={node.childImageSharp.fluid} />
-                  <p className="info">Deliciousss</p>
-                </div>
-              ))}
-            </GalleryWrapper>
-          </Section>
-        )
-      }}
-    />
-  )
-}
+      return (
+        <Section>
+          <Title title='featured items' message='a little taste' />
+
+          <GalleryWrapper>
+            {images.map(({ node }, i) => (
+              <div className={`item item-${i + 1}`} key={i}>
+                <Img fluid={node.childImageSharp.fluid} />
+                <p className="info">Deliciousss</p>
+              </div>
+            ))}
+          </GalleryWrapper>
+        </Section>
+      )
+    }}
+  />
+)
+
+export default Gallery
 
 
 const GalleryWrapper = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: grid;
   grid-template-columns: auto;  /* span the column as much as possible --> 1col layout */
   grid-row-gap: 1rem;           /* space between the rows */
