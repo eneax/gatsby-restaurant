@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
@@ -8,27 +8,26 @@ import Title from './title'
 import Section from '../components/styles/section'
 
 
-export default class QuickInfo extends Component {
-  render() {
-    return (
-      <Section>
-        <Title message='let us tell you' title='our mission' />
+const QuickInfo = () => (
+  <Section>
+    <Title message='our promise' title='to you' />
 
-        <QuickInfoWrapper>
-          <p className='text'>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt sit aspernatur suscipit, nulla enim molestias facere dolores adipisci quaerat omnis ea sequi hic deserunt esse. Laboriosam delectus alias aperiam quae!
-          </p>
+    <QuickInfoWrapper>
+      <p className='text'>
+        When you walk into our shop, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!
+      </p>
 
-          <Link to='/about' style={{ textDecoration: 'none' }}>
-            <SectionButton style={{ margin: '2rem auto' }}>
-              About
-            </SectionButton>
-          </Link>
-        </QuickInfoWrapper>
-      </Section>
-    )
-  }
-}
+      <Link to='/about' style={{ textDecoration: 'none' }}>
+        <SectionButton style={{ margin: '2rem auto' }}>
+          About
+        </SectionButton>
+      </Link>
+    </QuickInfoWrapper>
+  </Section>
+)
+
+export default QuickInfo
+
 
 const QuickInfoWrapper = styled.div`
   width: 90%; /* 90% of 90vw */
