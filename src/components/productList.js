@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Section from '../components/styles/section'
 import Product from './product'
 import Title from './title'
+import { QuickInfoWrapper } from '../components/styles/globalStyles'
 
 
 const PRODUCTS = graphql`
@@ -28,7 +29,13 @@ const PRODUCTS = graphql`
 
 const ProductList = () => (
   <Section>
-    <Title title='featured item' message='little taste' />
+    <Title title='ingredients' message='highest quality' />
+
+    <QuickInfoWrapper>
+      <p className='text'>
+        We take great pride in using only the freshest and highest quality ingredients – from locally and organically farmed produce, to free-range meats, and artisan breads and cheeses.
+      </p>
+    </QuickInfoWrapper>
 
     <List>
       <StaticQuery

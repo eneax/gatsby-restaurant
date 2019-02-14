@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -44,3 +45,22 @@ export const border = ({
 }) => {
   return `border:${width} ${type} ${color}`
 }
+
+
+export const QuickInfoWrapper = styled.div`
+  width: 90%; /* 90% of 90vw */
+  margin: 2rem auto;
+
+  .text {
+    line-height: 2rem;
+    color: ${colors.mainGrey};
+    word-spacing: .2rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+  @media (min-width: 992px) {
+    width: 60%;
+  }
+`
