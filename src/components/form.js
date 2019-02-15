@@ -90,4 +90,15 @@ const FormWrapper = styled.div`
       transform: translateY(1px);
     }
   }
+
+  /* Fix input["submit"] broken styles on mobile device */
+  textarea,
+  input.text,
+  input[type="text"],
+  input[type="button"],
+  input[type="submit"],
+  .input-checkbox {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
 `
