@@ -19,6 +19,7 @@ export const colors = {
   mainWhite: `#fff`,
   mainBlack: `#262626`,
   mainYellow: `#FFBB00`,
+  secYellow: `#ffc933`,
   mainGrey: `#474747`,
 }
 
