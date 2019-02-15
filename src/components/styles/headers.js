@@ -18,7 +18,7 @@ const PageHeader = ({ img, children }) => (
 
 
 const IndexHeader = styled.header`
-  min-height: calc(100vh - 56.94px); /* 100vh - height of navbar */
+  min-height: calc(100vh - 50.94px); /* 100vh - height of navbar */
   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 
               url(${props => props.img}) center/cover fixed no-repeat;
   

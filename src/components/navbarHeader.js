@@ -39,7 +39,7 @@ const NavbarHeaderWrapper = styled.div`
     font-weight: 600;
     ${letterSpacing({ spacing: '.3rem' })};
     transform: skew(-15deg);
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-decoration: none;
     text-transform: uppercase;
     color: ${colors.mainWhite};
