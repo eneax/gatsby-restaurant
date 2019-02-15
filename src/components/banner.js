@@ -29,6 +29,7 @@ const BannerWrapper = styled.div`
       spacing: '.75rem'
     })};
   }
+
   .subtitle {
     color: ${colors.mainWhite};
     ${textSlanted};
@@ -37,6 +38,23 @@ const BannerWrapper = styled.div`
     })};
     font-size: 1.5rem;
     text-transform: capitalize;
+  }
+
+  @media (max-width: 425px) {
+    .title {
+      font-size: 2.5rem;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 320px) {
+    .title {
+      font-size: 2rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
   }
 `
 

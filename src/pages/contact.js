@@ -16,7 +16,7 @@ const Contact = () => (
   <Layout>
     <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
     <PageHeader img={contactImg}>
-      <Banner title='contact us' subtitle={`let's get in touch`}>
+      <Banner title='contact' subtitle={`let's get in touch`}>
         <a href="tel:+18506484200">
           <BannerButton style={{ margin: '2rem auto' }}>
             <FaPhone /> 850-648-4200

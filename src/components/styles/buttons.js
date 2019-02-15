@@ -21,6 +21,13 @@ const BannerButton = styled.button`
     color: ${colors.mainBlack};
     cursor: pointer;
   }
+
+  @media (max-width: 425px) {
+    font-size: 1.25rem;
+  }
+  @media (max-width: 320px) {
+    font-size: 1rem;
+  }
 `
 
 const SectionButton = styled(BannerButton)`
