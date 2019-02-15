@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, letterSpacing, textSlanted } from '../components/styles/globalStyles'
+import { colors, letterSpacing, baskerville } from '../components/styles/globalStyles'
 
 export default function Title({ title, message }) {
   return (
@@ -17,7 +17,7 @@ const TitleWrapper = styled.div`
   text-align: center;
 
   .message {
-    ${textSlanted};
+    ${baskerville};
     ${letterSpacing({ spacing: '.3rem' })};
     font-size: 2rem;
     color: ${colors.mainYellow};

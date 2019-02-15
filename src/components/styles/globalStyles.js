@@ -37,7 +37,7 @@ export const letterSpacing = ({ spacing = '.1rem' }) => {
   return `letter-spacing:${spacing}`
 }
 
-export const textSlanted = `font-family:'Caveat', cursive;`
+export const baskerville = `font-family: baskerville,serif;`
 
 export const border = ({
   width = '.15rem',

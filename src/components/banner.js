@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, letterSpacing, textSlanted } from '../components/styles/globalStyles'
+import { colors, letterSpacing, baskerville } from '../components/styles/globalStyles'
 
 export default function Banner({ title, subtitle, children }) {
   return (
@@ -32,7 +32,7 @@ const BannerWrapper = styled.div`
 
   .subtitle {
     color: ${colors.mainWhite};
-    ${textSlanted};
+    ${baskerville};
     ${letterSpacing({
       spacing: '.15rem'
     })};
