@@ -61,6 +61,7 @@ const FormWrapper = styled.div`
     outline: 0;
     padding: .85rem;
     margin-bottom: 1.75rem;
+    border-radius: .5rem !important;
   }
 
   input[type="submit"] {
@@ -70,7 +71,7 @@ const FormWrapper = styled.div`
     text-align: center;
     font-style: normal;
     width: 100%;
-    border-radius: .5rem;
+    border-radius: .5rem !important; 
     border: 1px solid ${colors.secYellow};
     border-width: 1px 1px 3px;
     padding: 1rem;
