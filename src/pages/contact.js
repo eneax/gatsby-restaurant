@@ -1,4 +1,7 @@
 import React from "react"
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { FaPhone } from 'react-icons/fa'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,14 +11,31 @@ import Form from '../components/form'
 import Section from '../components/styles/section'
 import { PageHeader } from '../components/styles/headers'
 import { BannerButton } from '../components/styles/buttons'
-import contactImg from '../images/bcg/contactBcg.jpeg'
 
-import { FaPhone } from 'react-icons/fa'
 
-const Contact = () => (
+export const query = graphql`
+  query contactBgPic {
+    bgPic: file(relativePath: { regex: "/contactBcg.jpeg/" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 1240,
+          duotone: { 
+            highlight: "#000000", 
+            shadow: "#000000", 
+            opacity: 45 }
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+const Contact = ({ data }) => (
   <Layout>
-    <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
-    <PageHeader img={contactImg}>
+    <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} /> 
+
+    <PageHeader>
       <Banner title='contact' subtitle={`let's get in touch`}>
         <a href="tel:+18506484200">
           <BannerButton style={{ margin: '2rem auto' }}>
@@ -23,6 +43,18 @@ const Contact = () => (
           </BannerButton>
         </a>
       </Banner>
+
+      <Img
+        fluid={data.bgPic.childImageSharp.fluid}
+        alt="Three vintage phones"
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%'
+        }}
+      />
     </PageHeader>
 
     <Section>
