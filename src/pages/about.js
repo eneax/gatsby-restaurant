@@ -8,7 +8,7 @@ import Banner from "../components/banner"
 import Title from '../components/title'
 import Section from '../components/styles/section'
 import { PageHeader } from '../components/styles/headers'
-import { QuickInfoWrapper } from '../components/styles/globalStyles'
+import { QuickInfoWrapper, bgImg } from '../components/styles/globalStyles'
 
 
 export const query = graphql`
@@ -40,13 +40,7 @@ const About = ({ data }) => (
       <Img
         fluid={data.bgPic.childImageSharp.fluid}
         alt="Two lamps and a neon inside a pub"
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '100%'
-        }}
+        style={bgImg}
       />
     </PageHeader>
 

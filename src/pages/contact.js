@@ -11,6 +11,7 @@ import Form from '../components/form'
 import Section from '../components/styles/section'
 import { PageHeader } from '../components/styles/headers'
 import { BannerButton } from '../components/styles/buttons'
+import { bgImg } from '../components/styles/globalStyles'
 
 
 export const query = graphql`
@@ -47,13 +48,7 @@ const Contact = ({ data }) => (
       <Img
         fluid={data.bgPic.childImageSharp.fluid}
         alt="Three vintage phones"
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '100%'
-        }}
+        style={bgImg}
       />
     </PageHeader>
 

@@ -9,6 +9,7 @@ import Gallery from "../components/gallery"
 import Banner from "../components/banner"
 import { HomeHeader } from '../components/styles/headers'
 import { BannerButton } from '../components/styles/buttons'
+import { bgImg } from '../components/styles/globalStyles'
 
 
 export const query = graphql`
@@ -46,13 +47,7 @@ const IndexPage = ({ data }) => (
       <Img
         fluid={data.bgPic.childImageSharp.fluid}
         alt="Inside picture of a pub"
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '100%'
-        }}
+        style={bgImg}
       />
     </HomeHeader>
 

@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Banner from "../components/banner"
 import ProductList from "../components/productList"
 import { PageHeader } from '../components/styles/headers'
+import { bgImg } from '../components/styles/globalStyles'
 
 
 export const query = graphql`
@@ -37,13 +38,7 @@ const Menu = ({ data }) => (
       <Img
         fluid={data.bgPic.childImageSharp.fluid}
         alt="Picture of a hamburger and a beer"
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '100%'
-        }}
+        style={bgImg}
       />
     </PageHeader>
 

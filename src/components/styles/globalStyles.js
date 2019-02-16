@@ -66,3 +66,11 @@ export const QuickInfoWrapper = styled.div`
     width: 60%;
   }
 `
+
+export const bgImg = {
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  width: '100%',
+  height: '100%'
+}
