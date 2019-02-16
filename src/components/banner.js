@@ -16,7 +16,9 @@ export default function Banner({ title, subtitle, children }) {
 const BannerWrapper = styled.div`
   margin-bottom: 3rem;
   text-align: center;
-
+  position: relative;
+  z-index: 2;
+  
   a {
     text-decoration: none;
   }
