@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,14 +9,45 @@ import Title from '../components/title'
 import Section from '../components/styles/section'
 import { PageHeader } from '../components/styles/headers'
 import { QuickInfoWrapper } from '../components/styles/globalStyles'
-import aboutImg from '../images/bcg/aboutBcg.jpeg'
 
 
-const About = () => (
+export const query = graphql`
+  query aboutBgPic {
+    bgPic: file(relativePath: { regex: "/aboutBcg.jpeg/" }) {
+      childImageSharp {
+        fluid(
+          maxWidth: 1240,
+          duotone: { 
+            highlight: "#000000", 
+            shadow: "#000000", 
+            opacity: 45 }
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+
+const About = ({ data }) => (
   <Layout>
     <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
-    <PageHeader img={aboutImg}>
+
+    <PageHeader>
       <Banner title='about' subtitle='a little about us' />
+
+      <Img
+        fluid={data.bgPic.childImageSharp.fluid}
+        alt="Two lamps and a neon inside a pub"
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '100%'
+        }}
+      />
     </PageHeader>
 
     <Section>
@@ -29,12 +62,6 @@ const About = () => (
         </p>
         <p className='text'>
           Pork chop short ribs alcatra, pork burgdoggen hamburger strip steak kevin fatback jerky tri-tip boudin meatball cow. Kevin ball tip venison short loin bacon buffalo hamburger leberkas ham hock corned beef t-bone spare ribs. Ground round ribeye sirloin strip steak frankfurter, meatball bresaola shoulder buffalo turkey. Capicola bresaola brisket, prosciutto cupim shoulder t-bone shank frankfurter strip steak kielbasa chicken kevin rump. Leberkas beef ribs pork short ribs flank chuck salami short loin. Biltong pastrami burgdoggen jerky turducken pancetta chicken frankfurter.
-        </p>
-        <p className='text'>
-          Drumstick alcatra capicola salami flank, short loin prosciutto ball tip sausage pork chop bresaola. Cupim bacon t-bone buffalo corned beef, turkey fatback ham salami flank pork venison. Chicken ribeye picanha, spare ribs shankle filet mignon fatback rump venison ham. Rump andouille spare ribs boudin doner t-bone pork belly sirloin ground round burgdoggen turkey filet mignon frankfurter tenderloin. Drumstick ham hock ribeye fatback tail, biltong capicola tri-tip turkey rump salami cow short ribs burgdoggen.
-        </p>
-        <p className='text'>
-          Jowl biltong alcatra, andouille cow bresaola ham hock turkey sirloin shank chuck prosciutto t-bone. Ball tip sirloin strip steak tongue tri-tip pork belly shankle landjaeger turkey burgdoggen hamburger pig. Turducken ball tip shank, drumstick t-bone meatloaf shoulder leberkas andouille porchetta alcatra prosciutto doner capicola. Strip steak capicola shank ground round. Kevin bresaola sausage tenderloin landjaeger frankfurter beef chuck. Tongue frankfurter capicola strip steak, ground round corned beef porchetta andouille prosciutto shankle filet mignon. Bresaola venison shank, sirloin beef ribs strip steak spare ribs pork chop alcatra landjaeger.
         </p>
       </QuickInfoWrapper>
     </Section>
