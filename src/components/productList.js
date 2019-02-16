@@ -10,7 +10,9 @@ import { QuickInfoWrapper } from '../components/styles/globalStyles'
 
 const PRODUCTS = graphql`
   {
-    items: allContentfulMenu {
+    items: allContentfulMenu(sort: {
+      fields: createdAt
+    }) {
       edges {
         node {
           name
